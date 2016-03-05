@@ -39,7 +39,13 @@ let fuelSavingsCalculator = function() {
             let milesDrivenPerMonth = this.calculateMilesDrivenPerMonth(settings.milesDriven, settings.milesDrivenTimeframe);
             let tradeFuelCostPerMonth = calculateMonthlyCost(milesDrivenPerMonth, settings.tradePpg, settings.tradeMpg);
             let newFuelCostPerMonth = calculateMonthlyCost(milesDrivenPerMonth, settings.newPpg, settings.newMpg);
-            let savingsPerMonth = tradeFuelCostPerMonth - newFuelCostPerMonth;
+            let savingsPerMonthFuel = tradeFuelCostPerMonth - newFuelCostPerMonth;
+            let batteryWearAndTearPerMonth = milesDrivenPerMonth/200000 * settings.batteryCost;
+            console.log('batteryCost', settings.batteryCost);
+            console.log('batteryWearAndTearPerMonth', batteryWearAndTearPerMonth);
+
+
+            let savingsPerMonth = savingsPerMonthFuel - batteryWearAndTearPerMonth;
 
             return mathHelper.roundNumber(savingsPerMonth, 2);
         },

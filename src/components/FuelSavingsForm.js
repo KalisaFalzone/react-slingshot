@@ -46,6 +46,13 @@ const FuelSavingsForm = ({saveFuelSavings, calculateFuelSavings, appState}) => {
           </td>
         </tr>
         <tr>
+          <td><label htmlFor="batteryCost">Hybrid Battery Replacement Cost</label></td>
+          <td>
+            <FuelSavingsTextInput onChange={fuelSavingsKeypress} name="batteryCost" value={appState.batteryCost}/> dollars
+            per 200,000 miles
+          </td>
+        </tr>
+        <tr>
           <td><label>Date Modified</label></td>
           <td>{appState.dateModified}</td>
         </tr>
