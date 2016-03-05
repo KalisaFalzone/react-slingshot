@@ -52,8 +52,7 @@ let fuelSavingsCalculator = function() {
                 && settings.tradeMpg > 0
                 && settings.newPpg > 0
                 && settings.tradePpg > 0
-                && settings.milesDriven > 0
-                && settings.batteryCost > 0;
+                && settings.milesDriven > 0;
         },
 
         calculateSavings: function(settings) {

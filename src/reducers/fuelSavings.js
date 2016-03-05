@@ -10,7 +10,7 @@ const initialState = {
     tradePpg: null,
     milesDriven: null,
     milesDrivenTimeframe: 'week',
-    batteryCost: 0,
+    batteryCost: null,
     displayResults: false,
     dateModified: null,
     necessaryDataIsProvidedToCalculateSavings: false,
